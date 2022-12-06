@@ -2,3 +2,6 @@ show
 
 er
 go home
+new
+new
+test
