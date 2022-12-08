@@ -10,9 +10,11 @@ list_box = sg.Listbox(values=functions.get_todos(),
                         size=[45,10])
 edit_button = sg.Button("Edit")
 
+layout_GUI = [[label], [input_box, add_button], [list_box, edit_button]]
+
 #window
 window = sg.Window('To-Do App', 
-                    layout=[[label], [input_box, add_button], [list_box, edit_button]], 
+                    layout=layout_GUI, 
                     font=('Helvetica', 12))
 
 while True:
