@@ -2,7 +2,7 @@ import functions
 import PySimpleGUI as sg
 import time
 
-sg.theme("Mono")
+sg.theme("Black")
 
 clock = sg.Text("", key="clock")
 label = sg.Text("Type in a to-do")
@@ -13,7 +13,9 @@ list_box = sg.Listbox(values=functions.get_todos(),
                         enable_events=True, 
                         size=[45,10])
 edit_button = sg.Button("Edit")
-complete_button = sg.Button("Complete")
+complete_button = sg.Button(size=2, image_source="complete.png", 
+                            mouseover_colors="Blue", tooltip="Mark item as complete", 
+                            key="Complete" )
 exit_button = sg.Button("Exit")
 
 layout_GUI = [[clock],
