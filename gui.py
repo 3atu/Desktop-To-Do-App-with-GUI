@@ -1,6 +1,14 @@
 import functions
 import PySimpleGUI as sg
 import time
+import os
+import sys
+
+print(os.path.dirname(sys.executable))
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", "w") as file:
+        pass
 
 sg.theme("Black")
 
